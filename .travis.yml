@@ -15,13 +15,15 @@ node_js:
   - 17
 before_install: |
   NODEJS_VERSION=$(node --version)
-  if [ 'v8' == ${NODEJS_VERSION%%.*} ]
+  NODEJS_MAJOR_VERSION=${NODEJS_VERSION%%.*}
+  if [ 'v8' == "$NODEJS_MAJOR_VERSION" ]
   then
     npm install --global npm@5
-  elif [ 'v10' == ${NODEJS_VERSION%%.*} ]
+  elif [ 'v10' == "$NODEJS_MAJOR_VERSION" ]
   then
     npm install --global npm@7
-  else
+  elif [ 'v17' != "$NODEJS_MAJOR_VERSION" ]
+  then
     npm install --global npm@8
   fi
 script:
