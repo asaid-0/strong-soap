@@ -24,14 +24,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/loopbackio/strong-soap.git"
+    "url": "https://github.com/asaid-0/strong-soap.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/asaid-0"
   },
   "main": "./index.js",
   "directories": {
     "lib": "./lib"
   },
   "scripts": {
-    "postinstall": "husky install",
     "build": "babel src --source-maps --out-dir=lib",
     "prepublishOnly": "pinst --disable && npm run build",
     "postpublish": "pinst --enable",
