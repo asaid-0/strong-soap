@@ -1,5 +1,5 @@
 {
-  "name": "strong-soap",
+  "name": "@asaid-0/strong-soap",
   "version": "3.3.1",
   "description": "A minimal node SOAP client",
   "engines": {
@@ -27,6 +27,7 @@
     "url": "https://github.com/asaid-0/strong-soap.git"
   },
   "publishConfig": {
+    "name": "@asaid-0/strong-soap",
     "registry": "https://npm.pkg.github.com/asaid-0"
   },
   "main": "./index.js",
